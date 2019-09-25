@@ -1,0 +1,561 @@
+@keyframes header__square-pic {
+    from {
+        transform: rotate(15deg);
+      } /* Можно лучше: давайте повернем элемент на 15 градусов против часовой стрелки и добавим конечный кадр. from - с чего начинаем, to - к чему прийдем. Квадрат должен начать поворочиваться почасовой стрелке, как прописано в брифе - Исправлено*/ 
+      to{
+        transform: rotate(360deg);
+      }
+}
+@keyframes kaufman__triangle {
+    from {
+        transform: rotate(15deg);
+      }
+      to{
+          transform: rotate(360deg)
+      }
+    /* Можно лучше: Также давайте добавим конечный кадр. Треугольник должен начать поворочиваться почасовой стрелке, как прописано в брифе - Исправлено */ 
+}
+
+.page {
+    min-width: 1100px;
+    /* мы ещё не умеем делать мобильную версию сайта, */
+    /* поэтому выше установлена минимальная ширина страницы */
+    max-width: 1600px;
+    /* выше установили ограничение по максимальной ширине */
+    margin: 0 auto;
+    /* выше для экранов больше 1600px отцентрировали весь контент */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+
+.header {
+    position:relative;
+    height: 100vh;
+    min-height: 600px;
+    max-height: 756px;
+    background-color: #F2F2F2;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    /* выше установили ограничения для секции */
+}
+
+/* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
+.header__square-pic {
+    position: absolute;
+    top:64px;
+    right: 0;
+    width:568px;
+    height: 568px;  
+    background-color:#2F80ED;
+    z-index: 0;
+    transition: all .5s ease;
+    animation: header__square-pic 20s linear infinite; /* Отлично: анимация правильно добавлена блоку*/
+}
+
+
+/* и элемента с модификатором */
+.table__cell_kaufman {
+    width: 200px;
+    color: white;
+    margin-right: 0;
+    margin-top: 80px;
+}
+.logo_header{
+     
+    position: absolute;
+  top: 30px;
+  left: 64px;
+  z-index: 2;
+}
+.header__title{
+    z-index:2;
+    display: flex;
+   justify-content: center;
+    font-size: 102px;
+    line-height:96px;
+    width: 730px;
+    font-weight:bold;
+    padding: 64px;
+   
+    
+}
+.header__subtitle{
+    position: absolute;
+    bottom: 30px;
+    left: 64px;
+    width:388px;
+    font-size: 18px;
+    line-height: 25px;
+    z-index: 2;
+}
+.header__main-illustration{
+  background-image: url(../images/two_again.png);
+  background-size: 765px 608px;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  width:765px;
+  height: 608px;
+  position: absolute;
+  
+  bottom:0px;
+  right:0px;
+  z-index: 1;
+}
+.two-columns{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    
+    margin-left: auto;
+    margin-right: auto;
+ 
+}
+
+
+
+.two-columns__brief {
+    margin-top: 30px;
+    left: 30px;
+    width: 175px;
+    font-size: 18px;
+    line-height: 1.2;
+  
+    
+    color:#2F80ED;
+    font-weight: 400;
+    
+}
+
+.two-columns__main-text{
+    margin-bottom: 30px;
+    left: 30px;
+    width: 80%; 
+    min-width: 784px;
+    font-size: 24px;
+    line-height: 34px;
+    margin-bottom: 0
+}
+.description{
+    padding-bottom: 100px;
+    padding-top: 100px;
+}
+
+.table{
+    display:flex; 
+    justify-content: space-between ;
+    margin: auto;
+    align-items: baseline;
+    flex-wrap:wrap;
+    flex-direction: row;
+    width: 1100px;
+    color: white;
+    font-size: 18px;
+    z-index: 1;
+        
+}
+   
+
+.digits{
+    color:black;
+    padding-bottom: 100px;
+
+}
+.section-title{
+    display: flex;
+    justify-content: center; 
+    line-height: 69px;
+    font-size: 60px;
+    
+}
+.section-subtitle{
+    display: flex;
+    justify-content: center; 
+    margin-top:20px;
+    line-height: 34px;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+
+.table__cell_black{
+    width: 250px;
+  
+    line-height: 1.2;
+    margin-top: 60px;
+   
+    font-size: 18px;
+    color:black;
+
+    
+}
+
+.table__heading{
+display:  flex;
+top: 20px;
+line-height: 1.15;
+font-size: 24px;
+font-weight: 500;
+
+}
+.feinman {
+    position: relative;
+    height: 790px;  
+    background-color:#F2F2F2 ;
+    background-image: url(../images/feinman.png);
+    background-repeat: no-repeat;
+    background-size: 850px 620px;
+    background-position: left bottom;
+}
+
+.feinman__title {
+    padding: 100px 0 0;
+    height: 276px;
+    width: 648px;
+    margin: 0px auto 0;   
+    text-align: center;
+    line-height: 1.15;
+    font-size: 100px;
+    font-weight: 500;
+}
+
+.feinman__subtitle {
+    margin: 70px auto 0;
+    text-align: center;
+    line-height: 51px;
+    font-size: 36px;
+}
+
+.feinman__link {
+    position: absolute;
+    top: 56.5%;
+    right: 48px;
+    line-height: 51px;
+    font-size: 36px;
+    color: black;
+    text-decoration: none;
+}
+
+.table__cell_white {
+width: 200px;
+
+}
+
+.section-title_white{
+    color: white;
+    font-weight: 500;
+    z-index: 1;
+    
+    
+    
+}
+.section-subtitle_white{
+    color: white;
+    z-index: 1;
+}
+
+
+.kaufman{
+    display: flex;
+   flex-direction: column;
+   align-items: center;
+ 
+    /* Можно лучше: max-height тоже следует использовать осторожно, при добавлении контента в какой-то момент может просто не хватить места */
+   /* Можно лучше: В данном случае совсем не лучший вариант использовать height: 100vh, при уменьшении окна браузера по высоте контент обрезается - теряется информация. Думаю, что тут нет необходимости явно прописывать высоту, особенно в относительных единицах измерения. Посто можно удалить это правило, тогда все встанет на свои места, и блок ужмется под контент. Тем более, что при добавлении контента, блок будет также обрезаться, и часть элементов просто не будет видна - Исправлено */
+   margin-left: auto;
+   margin-right: auto;
+   overflow: hidden;
+    background-color: #1F1F1F;
+    position: relative;
+   
+   
+}
+
+.kaufman__triangle{
+    position: absolute;
+    right: -200px;
+    top:-200px;
+    z-index: 0;
+    transition: all .5s ease;
+    animation: kaufman__triangle 20s linear infinite;
+    /* Отлично, теперь фигуры поворачиваются в нужном направлении*/
+    /* Нужно исправить: сейчас треугольник ниже, чем в брифе, нужно изменить свойства top и right, чтобы он встал на свое место(Оба свойства скорее всего будут отрицательными) - Исправлено */
+}
+.table__heading{
+    font-size: 24px;
+    line-height: 1.15;
+    font-weight: 500;
+}
+.footer{
+    display: flex;
+    justify-content: center;
+   /* Можно лучше: Это правило здесь не обязательно, а вот justify-content: center лучше добавить, чтобы выровнять элементы по центру - Исправлено */
+    min-height: 252px;
+    color: white;
+    background-color: #1F1F1F;
+    overflow: hidden;
+
+    
+}
+.logo_footer{
+   margin-left:60px;
+   margin-top:100px
+
+}
+
+.footer__columns{
+    display: flex;
+    align-items: center;
+    width:90%;
+     /*Можно лучше, давайте немного поправим св-ва, чтобы блок выглядел хорошо на всех разрешениях экрана. Предлагаю обратиться к брифу:
+    1. .footer__columns имеет ширину 90%
+    2. flex-basis: 711px; переносим и добавляем блоку .footer__column_copyright
+    3. Добавляем блоку footer__all margin-left: auto, а у его элементов можно убрать ширину, по брифу ее нет *
+    Теперь блок должен выглядить отлично - Исправлено */
+    justify-content: space-between;
+    
+   
+}
+.footer__autor{
+    position: relative;
+    margin-top: 150px;
+    
+    font-size: 18px;
+    line-height: 25px;
+    margin-left:60px ;
+    margin-bottom: 40px;
+}
+.footer__column_info{
+    position: relative;
+   
+    color: white;
+
+    height: 200px;
+    
+   
+}
+.footer__column_social{
+align-items: center;
+color: white;
+height: 200px;
+left: 300px;
+
+}
+.footer__column_copyright{
+   display: flex;
+   justify-content: space-between;
+   flex-direction: column;
+   width: 300px;
+   flex-basis: 711px;
+}
+.footer__all{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-left: auto;
+
+}
+.footer__column-heading{
+    margin-left: 38px;
+}
+.footer__menu-link{
+    color:white;
+}
+.two-columns__span-bold{
+    font-weight: 500;
+    margin-right: 7px;
+}
+.header__link{
+    margin-left: 7px;
+    text-decoration: none;
+    opacity: 1;
+    color:#2F80ED
+    /* Надо исправить: Нужно изменить цвет ссылки (должен быть как в брифе)- Исправлено*/
+}
+
+
+.social{
+    display: flex;
+}
+
+
+.social__link{
+    color:white;
+    margin-left: 5px;
+}
+
+li{
+    list-style: none;
+}
+
+
+.cards__image{
+    border-radius:1000px;
+    height: 160px ; 
+    width: 160px;
+    margin: 0 auto 43px ;
+    
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 100px;
+    grid-row-gap: 60px;
+    width: 80%;
+    margin: 0 auto;
+} /* Надо исправить: Отлично, что используете современные гриды, но нужно выровнять блок по центру, предлагаю изменить margin на 0 auto, также ширина блока по брифу 80%, нужно изменить - Исправлено  */
+.cards__title{
+
+    /* Надо исправить: Отлично, что используете flexbox, но лучше добавить display: flex всему блоку .cards__item вместо .cards__title, а для абзацев добавить text-align: center, чтобы выровнять блоки по центру - Исправлено*/
+    /*Можно лучше: это правило здесь не нужно, т.к у блока не прописан display: flex, давайте уберем его - Исправлено */
+    font-size: 24px;
+    line-height: 1.15;
+    font-weight: 500;
+    text-align: center;
+    margin: 0px;
+}
+.cards__item{
+    padding-top:60px; 
+    display: flex;
+   width: 240px;
+    flex-direction: column;
+}
+.cards__description{
+    font-size: 18px;
+    line-height: 23px;
+    font-weight: normal;
+    text-align: center;
+}
+.section-title_technics{
+ padding-bottom: 20px;
+ margin-top: 0;
+}
+
+.technics{
+    padding-bottom:100px; 
+}
+
+.video__iframes{
+display:flex;
+margin-top: 50px;
+margin-bottom:  -200px ;
+    /* Нужно исправить:
+        1. Убираем горизонатальные отступы в 10%, они не нужны.
+        2. Добавляем для video__iframe_first { margin-left: auto;} для второго - margin-rigth: auto; - тогда при всех размерах экрана блоки будут выравниваться по середине - Исправлено */
+}
+.video__iframe_first{
+    margin-left: auto;
+    border: 0;
+    margin-right: 10px;
+}
+.video__iframe_second{
+    margin-right: auto;
+    border: 0;
+    margin-left: 10px;
+
+}
+.khan{
+    background-color:#F2F2F2 ;
+}
+.khan__container{
+    margin: 0 10% 0 10%;
+    padding-top:105px; 
+
+}
+.khan__quote{
+    width: 790px;
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: normal;
+
+}
+.khan__author{
+    font-size: 30px;
+    line-height: 42px;
+    font-weight: normal;
+   
+}
+.khan__title{
+    font-size: 60px;
+    line-height: 1.15;
+    font-weight: 500;
+   
+}
+.khan__quote-author{
+    font-size: 24px;
+    line-height: 1.15;
+    font-weight: 500;
+   
+}
+.khan__quote-author-subline{
+    font-size: 24px;
+    line-height: 1.15px;
+    font-weight: normal;
+
+}
+.khan__buy-link{
+ color:#2F80ED;
+ font-size: 30px;
+ line-height:42px;
+ margin-left: 20px;
+ font-weight: normal;
+ height: 35px;
+
+}
+.khan__book-pic{
+
+height: 620px;
+overflow: hidden;
+margin-bottom: -100px;
+}
+.khan__book-container{
+    display: flex;
+    
+}
+.recources{
+    display: flex;
+    width: 1100px;
+    align-items: center;
+    justify-content: space-around;
+    margin: 80px auto 217px ;
+}
+.section-title_resources{
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+.section-subtitle_resources{
+margin-top: 0;
+margin-bottom: 80px;
+}
+.recources__logo{
+    width: 270px;
+    height: 38px;
+}
+.oakley{
+    background-color:#F2F2F2
+
+}
+
+.two-columns_oakley{
+    margin-top: 160px;
+}
+.two-columns__paragraph_oakley{
+    margin-top: 160px;
+}
+.two-columns__brief_oakley{
+    margin-top: 160px;
+}
+
+a{
+    text-decoration: none;
+}
+.link{
+    opacity:1;
+}
+.link:hover{
+
+   opacity: 0.6; 
+   transition: opacity 1s linear 0;
+}
